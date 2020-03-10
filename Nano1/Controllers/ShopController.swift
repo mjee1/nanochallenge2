@@ -14,7 +14,7 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     var itemPrice = ["1", "2", "3", "4", "5", "6"]
     var itemPic:[UIImage] = [
         UIImage(named: "maleHair1.png")!,
-        UIImage(named: "maleHair1.png")!,
+        UIImage(named: "maleHair2.png")!,
         UIImage(named: "maleHair1.png")!,
         UIImage(named: "maleHair1.png")!,
         UIImage(named: "maleHair1.png")!,

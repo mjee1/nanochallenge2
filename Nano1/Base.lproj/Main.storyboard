@@ -15,7 +15,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5zI-50-qia">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="0.85490196080000003" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="1" green="0.85490196080000003" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="nFt-Fd-VfT">
@@ -27,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja4-oV-kdX">
-                                    <rect key="frame" x="23" y="21" width="255" height="37"/>
+                                    <rect key="frame" x="29" y="21" width="255" height="37"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,7 +57,7 @@
                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="28w-zw-BHr">
                                     <rect key="frame" x="193" y="101" width="196" height="2"/>
                                     <color key="tintColor" red="0.95294117649999999" green="0.76470588240000004" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="progressTintColor" red="0.95294117649999999" green="0.76470588240000004" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="progressTintColor" red="1" green="0.85408615460000004" blue="0.63413263580000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="trackTintColor" white="0.88124286529680351" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </progressView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M50-wm-nV6">
@@ -86,16 +86,6 @@
                                     <rect key="frame" x="157" y="150" width="30" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIl-3M-nLi">
-                                    <rect key="frame" x="16" y="6" width="18" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <color key="tintColor" red="1" green="0.85490196080000003" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <state key="normal" image="pencil" catalog="system"/>
-                                    <connections>
-                                        <action selector="editName:" destination="fZs-Yb-6Uy" eventType="touchUpInside" id="dnH-vk-m0X"/>
-                                    </connections>
-                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGL-Nn-BbE">
                                     <rect key="frame" x="325" y="26" width="34" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -123,6 +113,16 @@
                                     <rect key="frame" x="55" y="159" width="46" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIl-3M-nLi">
+                                    <rect key="frame" x="8" y="28" width="18" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <color key="tintColor" red="1" green="0.85490196080000003" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <state key="normal" image="pencil" catalog="system"/>
+                                    <connections>
+                                        <action selector="editName:" destination="fZs-Yb-6Uy" eventType="touchUpInside" id="dnH-vk-m0X"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.3921568627" green="0.6588235294" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
@@ -147,7 +147,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKp-1W-azx">
                                             <rect key="frame" x="20" y="20" width="374" height="17.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -158,6 +158,7 @@
                                         <constraint firstItem="mKp-1W-azx" firstAttribute="top" secondItem="wDu-6H-FD7" secondAttribute="top" constant="20" symbolic="YES" id="r5d-Iu-6be"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="contentCell" destination="mKp-1W-azx" id="309-dA-8jo"/>
                                 </connections>
@@ -170,13 +171,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Tastical" id="QRa-OB-hBN">
                         <barButtonItem key="leftBarButtonItem" title="Shop" id="dI4-UE-ONl">
-                            <color key="tintColor" red="1" green="0.85490196080000003" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" red="0.3921568627" green="0.6588235294" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="h8D-6Q-ceE" kind="show" id="RsL-GR-3T4"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xKe-NE-zia">
-                            <color key="tintColor" red="1" green="0.85490196078431369" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" red="0.3921568627" green="0.6588235294" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="addTask:" destination="fZs-Yb-6Uy" id="VNF-dn-A52"/>
                             </connections>
@@ -203,69 +204,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ft7-W8-R9P">
-                                <rect key="frame" x="0.0" y="57" width="414" height="751"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QGW-nw-ORO">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="749"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xte-lu-kkE">
-                                        <size key="itemSize" width="92" height="122"/>
-                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </collectionViewFlowLayout>
-                                    <cells>
-                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="OaB-fq-HZl" customClass="ShopCell" customModule="Nano1" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="92" height="122"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RBb-Ps-Yvd">
-                                                <rect key="frame" x="0.0" y="0.0" width="92" height="122"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86I-3B-5gV">
-                                                        <rect key="frame" x="0.0" y="94" width="92" height="28"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.85860554660210242" green="0.86162349688051088" blue="0.87067734771573602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XN-8c-3Hq">
-                                                        <rect key="frame" x="25" y="97" width="42" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWd-AU-raP">
-                                                        <rect key="frame" x="9" y="8" width="74" height="75"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                </subviews>
-                                            </collectionViewCellContentView>
-                                            <size key="customSize" width="92" height="122"/>
-                                            <connections>
-                                                <outlet property="myCell" destination="9XN-8c-3Hq" id="blh-Oz-iBZ"/>
-                                                <outlet property="myPic" destination="kWd-AU-raP" id="nFd-k0-dhD"/>
-                                            </connections>
-                                        </collectionViewCell>
-                                    </cells>
-                                    <connections>
-                                        <outlet property="dataSource" destination="h8D-6Q-ceE" id="OSF-uT-etG"/>
-                                        <outlet property="delegate" destination="h8D-6Q-ceE" id="sDe-sh-bog"/>
-                                    </connections>
-                                </collectionView>
-                            </tableView>
                             <view contentMode="scaleToFill" id="Yqz-ep-Cwe">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coin" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oVo-FV-U6l">
-                                        <rect key="frame" x="291" y="10" width="34" height="32"/>
+                                        <rect key="frame" x="322" y="13" width="34" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98W-9h-Bol">
-                                        <rect key="frame" x="333" y="16" width="34" height="26"/>
+                                        <rect key="frame" x="364" y="18" width="34" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -275,6 +223,58 @@
                                 <color key="backgroundColor" red="0.3921568627" green="0.6588235294" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="1" green="0.85490196080000003" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QGW-nw-ORO">
+                                <rect key="frame" x="0.0" y="58" width="414" height="759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xte-lu-kkE">
+                                    <size key="itemSize" width="92" height="122"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="OaB-fq-HZl" customClass="ShopCell" customModule="Nano1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="92" height="122"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RBb-Ps-Yvd">
+                                            <rect key="frame" x="0.0" y="0.0" width="92" height="122"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86I-3B-5gV">
+                                                    <rect key="frame" x="0.0" y="94" width="92" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.85860554660210242" green="0.86162349688051088" blue="0.87067734771573602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XN-8c-3Hq">
+                                                    <rect key="frame" x="25" y="97" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWd-AU-raP">
+                                                    <rect key="frame" x="9" y="8" width="74" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="92" height="122"/>
+                                        <connections>
+                                            <outlet property="myCell" destination="9XN-8c-3Hq" id="blh-Oz-iBZ"/>
+                                            <outlet property="myPic" destination="kWd-AU-raP" id="nFd-k0-dhD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cellHeader" id="Uav-oJ-iep">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="h8D-6Q-ceE" id="OSF-uT-etG"/>
+                                    <outlet property="delegate" destination="h8D-6Q-ceE" id="sDe-sh-bog"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Xm2-iS-NnO"/>
@@ -358,7 +358,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.3921568627" green="0.6588235294" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" red="0.3921568627" green="0.6588235294" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>

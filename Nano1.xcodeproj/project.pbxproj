@@ -21,6 +21,8 @@
 		47D4668A240F429A00F77144 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D46689240F429A00F77144 /* ToDoCell.swift */; };
 		47E4CA1624173E02008DF1BE /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E4CA1524173E02008DF1BE /* ShopCell.swift */; };
 		47E4CA1824175202008DF1BE /* char.gif in Resources */ = {isa = PBXBuildFile; fileRef = 47E4CA1724175202008DF1BE /* char.gif */; };
+		47E4CA1B24175DCA008DF1BE /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E4CA1924175DCA008DF1BE /* CustomTableCell.swift */; };
+		47E4CA1C24175DCA008DF1BE /* CustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E4CA1A24175DCA008DF1BE /* CustomTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		47D46689240F429A00F77144 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 		47E4CA1524173E02008DF1BE /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
 		47E4CA1724175202008DF1BE /* char.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = char.gif; sourceTree = "<group>"; };
+		47E4CA1924175DCA008DF1BE /* CustomTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
+		47E4CA1A24175DCA008DF1BE /* CustomTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				47D46689240F429A00F77144 /* ToDoCell.swift */,
+				47E4CA1924175DCA008DF1BE /* CustomTableCell.swift */,
+				47E4CA1A24175DCA008DF1BE /* CustomTableCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -191,6 +197,7 @@
 			files = (
 				475A9AB5240DE64100873847 /* LaunchScreen.storyboard in Resources */,
 				471E058C2411D39A000868A8 /* Assets.xcassets in Resources */,
+				47E4CA1C24175DCA008DF1BE /* CustomTableCell.xib in Resources */,
 				47E4CA1824175202008DF1BE /* char.gif in Resources */,
 				475A9AB0240DE64000873847 /* Main.storyboard in Resources */,
 			);
@@ -207,6 +214,7 @@
 				475A9AC3240DEB0B00873847 /* Task.swift in Sources */,
 				47713C5D2410005A007158B3 /* loadGif.swift in Sources */,
 				47D4668A240F429A00F77144 /* ToDoCell.swift in Sources */,
+				47E4CA1B24175DCA008DF1BE /* CustomTableCell.swift in Sources */,
 				4774FE5124163D1200FBF181 /* ShopController.swift in Sources */,
 				475A9AA9240DE64000873847 /* AppDelegate.swift in Sources */,
 				478A4EB6240E6C0200A5B540 /* TaskUtility.swift in Sources */,
