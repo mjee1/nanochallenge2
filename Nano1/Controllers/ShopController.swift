@@ -8,6 +8,12 @@
 
 import UIKit
 
+//MARK: Protocol
+protocol PointsEntryDelegate: AnyObject {
+    func passUserPonts(_ point: Int)
+}
+
+
 // tanya mentor tech lain structure code disini, ada yang bisa jelasin ga, coba
 
 enum FashionOutwear {
@@ -27,11 +33,11 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     
     @IBOutlet weak var userPoints: UILabel!
     
-    var currPoints = 0
+    weak var delegate: PointsEntryDelegate?
+    
+    private var currPoints = 0
     
     let reuseIdentifier = "cell"
-    
-    var itemTypes = ["hair", "top", "bottom"]
     
     private var sections = [FashionOutwear]()
     private var dataModel = ProductModel()
@@ -51,7 +57,7 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
         setSection()
     }
     
-    //MARK: Data Source protocol
+    //MARK: Data Source
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
 //        return 3
@@ -129,6 +135,9 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
             print(self.currPoints)
             
             self.userPoints.text = String(self.currPoints)
+            //pass to the delegate protocol
+            self.delegate?.passUserPonts(self.currPoints)
+            
             UserDefaults.standard.set(self.currPoints, forKey: "points")
             
             //ganti userItem dengan yang udh di purchase

@@ -152,6 +152,15 @@ class TaskController:UITableViewController {
     
 }
 
+//MARK: Protocol Delegate
+extension TaskController: PointsEntryDelegate {
+    func passUserPonts(_ point: Int) {
+        self.pointIncr = point
+        self.userPoints.text = String(self.pointIncr)
+        print("Delegate run, adding \(point) to userPoints")
+    }
+}
+
 // MARK: - Data Source
 extension TaskController {
     
@@ -281,3 +290,5 @@ extension TaskController {
         return indexPath.section == 0 ? UISwipeActionsConfiguration(actions: [doneAction]) : nil
     }
 }
+
+
