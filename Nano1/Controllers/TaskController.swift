@@ -19,6 +19,8 @@ class TaskController:UITableViewController {
     @IBOutlet weak var userLevel: UILabel!
     @IBOutlet weak var outletName: UILabel!
     
+    @IBOutlet weak var userHair: UIImageView!
+    
     var progress = 0.0
     var pointIncr = 0
     var taskDoneCounter = 0
@@ -189,7 +191,7 @@ extension TaskController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = UIColor(red:1.00, green:0.85, blue:0.64, alpha:1.0)
+        view.tintColor = UIColor(red:0.84, green:0.93, blue:1.00, alpha:1.0)
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.black
     }
