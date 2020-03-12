@@ -10,17 +10,13 @@ import UIKit
 
 //MARK: Protocol
 protocol PointsEntryDelegate: AnyObject {
-    func passUserPonts(_ point: Int)
+    func passUserPoints(_ point: Int)
+    func passImageName(_ imgName: String,  _ section: Int)
 }
 
 
-// tanya mentor tech lain structure code disini, ada yang bisa jelasin ga, coba
-
 enum FashionOutwear {
-//    case header(headerType)
     case content(headerType)
-//    case topContent
-//    case bottomContent
     
     enum headerType {
         case hair
@@ -33,15 +29,19 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     
     @IBOutlet weak var userPoints: UILabel!
     
-    weak var delegate: PointsEntryDelegate?
+    weak var pointEntryDelegate: PointsEntryDelegate!
     
-    private var currPoints = 0
+    var currPoints = 0
+    
     
     let reuseIdentifier = "cell"
     
     private var sections = [FashionOutwear]()
     private var dataModel = ProductModel()
+    private var myCell = ShopCell()
     
+    
+    private var tempArray: [String]?
     
 //    var itemStore: ItemStore! {
 //        didSet {
@@ -52,9 +52,15 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         currPoints = UserDefaults.standard.integer(forKey: "points")
         userPoints.text = String(currPoints)
         setSection()
+        
+        //Retrieve
+        tempArray = UserDefaults.standard.stringArray(forKey: "itemBool") ?? [String]()
+        print(self.dataModel.itemBool)
+        print(tempArray ?? [])
     }
     
     //MARK: Data Source
@@ -91,6 +97,7 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
         }
         return UICollectionReusableView()
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         switch sections[indexPath.section] {
@@ -106,6 +113,10 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
             switch type {
             case .hair:
                 isHair = true
+//                if tempArray?[indexPath.row] == "true" {
+//                    print("\(indexPath.row) is bought")
+//                    //myCell.isHidden = true
+//                }
             case .top:
                 isTop = true
             case .bottom:
@@ -113,6 +124,8 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
             }
 
             cell.cellConfig(isHair: isHair, isTop: isTop, isBottom: isBottom)
+            
+            
             
 //            Item(itemImage: self.itemPic[indexPath.item], itemType: self.itemTypes[0], itemPrice: Int(self.itemPrice[indexPath.item]) ?? 0, isBought: false)
             return cell
@@ -132,21 +145,25 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
             
             //substract the points
             self.currPoints -= Int(self.dataModel.itemPrice[indexPath.item]) ?? 0
-            print(self.currPoints)
+//            print(self.currPoints)
             
             self.userPoints.text = String(self.currPoints)
-            //pass to the delegate protocol
-            self.delegate?.passUserPonts(self.currPoints)
+            //pass to the pointEntryDelegate protocol
+            
+            // MARK: Passing Delegate
+            self.pointEntryDelegate?.passUserPoints(self.currPoints)
             
             UserDefaults.standard.set(self.currPoints, forKey: "points")
             
             //ganti userItem dengan yang udh di purchase
-            if indexPath.section == 0 {
-                print(self.dataModel.itemPic[indexPath.item])
+            if indexPath.section == 0 { self.pointEntryDelegate?.passImageName(self.dataModel.itemPic[indexPath.row], indexPath.section)
                 
+//                self.tempArray?[indexPath.item] = "true"
+//                UserDefaults.standard.set(self.tempArray, forKey: "itemBool")
             }
-            else {
-                
+            else if indexPath.section == 1 { self.pointEntryDelegate?.passImageName(self.dataModel.itemPic2[indexPath.row], indexPath.section)
+            }
+            else if indexPath.section == 2 { self.pointEntryDelegate?.passImageName(self.dataModel.itemPic3[indexPath.row], indexPath.section)
             }
         }
         
@@ -158,6 +175,7 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
         present(alertController, animated: true)
     }
 }
+
 
 private extension ShopController {
     func setSection() {

@@ -11,7 +11,9 @@ import Foundation
 class ItemStore {
     var items = [Item]()
     
-    func setBought(_ item: Item) {
-        item.isBought = true
+    func setBought(_ item: Item, isBought: Bool = false, atIndex: Int) {
+        if isBought == true {
+            print("Item at \(atIndex) is bought")
+        }
     }
 }

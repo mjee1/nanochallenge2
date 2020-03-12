@@ -9,21 +9,17 @@
 import Foundation
 import UIKit
 
-class Item: NSObject {
+class Item: NSObject, NSCoding {
     
     var itemImage: UIImage?
-    var itemType: String?
-    var itemPrice: Int?
     var isBought: Bool?
     
     private let itemKey = "item"
     private let isBoughtKey = "isBought"
     
     //initializer (probably don't need them?
-    init(itemImage: UIImage, itemType: String, itemPrice: Int, isBought: Bool = false) {
+    init(itemImage: UIImage, isBought: Bool = false) {
         self.itemImage = itemImage
-        self.itemType = itemType
-        self.itemPrice = itemPrice
         self.isBought = isBought
     }
     

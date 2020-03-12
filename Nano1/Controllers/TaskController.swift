@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class TaskController:UITableViewController {
     
     
@@ -28,6 +30,11 @@ class TaskController:UITableViewController {
     
     var userName = "Jane Doe"
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sh:ShopController = segue.destination as! ShopController
+        sh.pointEntryDelegate = self
+    }
     
     // Panggil method to store tasks in the MVC
     var taskStore: TaskStore! {
@@ -154,9 +161,18 @@ class TaskController:UITableViewController {
 
 //MARK: Protocol Delegate
 extension TaskController: PointsEntryDelegate {
-    func passUserPonts(_ point: Int) {
+    func passImageName(_ imgName: String, _ section: Int) {
+        if section == 0 {
+            //Change hair image
+            self.userHair.image = UIImage(named: imgName)
+        }
+    }
+    
+    func passUserPoints(_ point: Int) {
         self.pointIncr = point
-        self.userPoints.text = String(self.pointIncr)
+        DispatchQueue.main.async {
+            self.userPoints.text = String(self.pointIncr)
+        }
         print("Delegate run, adding \(point) to userPoints")
     }
 }
