@@ -41,15 +41,6 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     private var myCell = ShopCell()
     
     
-    private var tempArray: [String]?
-    
-//    var itemStore: ItemStore! {
-//        didSet {
-//            //itemStore.items = ItemUtility.fetch() ?? [Item]
-//        }
-//    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,10 +48,6 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
         userPoints.text = String(currPoints)
         setSection()
         
-        //Retrieve
-        tempArray = UserDefaults.standard.stringArray(forKey: "itemBool") ?? [String]()
-        print(self.dataModel.itemBool)
-        print(tempArray ?? [])
     }
     
     //MARK: Data Source
@@ -113,10 +100,6 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
             switch type {
             case .hair:
                 isHair = true
-//                if tempArray?[indexPath.row] == "true" {
-//                    print("\(indexPath.row) is bought")
-//                    //myCell.isHidden = true
-//                }
             case .top:
                 isTop = true
             case .bottom:
@@ -124,9 +107,6 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
             }
 
             cell.cellConfig(isHair: isHair, isTop: isTop, isBottom: isBottom)
-            
-            
-            
 //            Item(itemImage: self.itemPic[indexPath.item], itemType: self.itemTypes[0], itemPrice: Int(self.itemPrice[indexPath.item]) ?? 0, isBought: false)
             return cell
         }
@@ -134,36 +114,41 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     
     //MARK: Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("You selected it")
         let alertController = UIAlertController(title: "Confirmation", message: "Are you sure you want to buy this?", preferredStyle: .alert)
         
         let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
-            print("You bought #\(indexPath.item)")
-            
             //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as! ShopCell
             //change isBought bool to true
             
             //substract the points
-            self.currPoints -= Int(self.dataModel.itemPrice[indexPath.item]) ?? 0
-//            print(self.currPoints)
-            
-            self.userPoints.text = String(self.currPoints)
-            //pass to the pointEntryDelegate protocol
-            
-            // MARK: Passing Delegate
-            self.pointEntryDelegate?.passUserPoints(self.currPoints)
-            
-            UserDefaults.standard.set(self.currPoints, forKey: "points")
-            
-            //ganti userItem dengan yang udh di purchase
-            if indexPath.section == 0 { self.pointEntryDelegate?.passImageName(self.dataModel.itemPic[indexPath.row], indexPath.section)
+            if (self.currPoints - Int(self.dataModel.itemPrice[indexPath.item])!) >= 0 {
+                self.currPoints -= Int(self.dataModel.itemPrice[indexPath.item]) ?? 0
                 
-//                self.tempArray?[indexPath.item] = "true"
-//                UserDefaults.standard.set(self.tempArray, forKey: "itemBool")
+                self.userPoints.text = String(self.currPoints)
+                
+                //MARK: Passing Delegate
+                self.pointEntryDelegate?.passUserPoints(self.currPoints)
+                UserDefaults.standard.set(self.currPoints, forKey: "points")
+                
+                //Ganti user
+                if indexPath.section == 0 {
+                    self.pointEntryDelegate?.passImageName(self.dataModel.itemPic[indexPath.row], indexPath.section)
+                }
+                else if indexPath.section == 1 {
+                    self.pointEntryDelegate?.passImageName(self.dataModel.itemPic2[indexPath.row], indexPath.section)
+                }
+                else if indexPath.section == 2 {
+                    self.pointEntryDelegate?.passImageName(self.dataModel.itemPic3[indexPath.row], indexPath.section)
+                }
             }
-            else if indexPath.section == 1 { self.pointEntryDelegate?.passImageName(self.dataModel.itemPic2[indexPath.row], indexPath.section)
-            }
-            else if indexPath.section == 2 { self.pointEntryDelegate?.passImageName(self.dataModel.itemPic3[indexPath.row], indexPath.section)
+            else {
+                //Show another alert showing that you don't have enough points
+                print("Don't have enough points")
+                let alert = UIAlertController(title: "Not Enough Points", message: "Sorry but you don't have enough points", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .cancel)
+                
+                alert.addAction(okAction)
+                self.present(alert, animated: true)
             }
         }
         

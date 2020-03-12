@@ -22,6 +22,9 @@ class TaskController:UITableViewController {
     @IBOutlet weak var outletName: UILabel!
     
     @IBOutlet weak var userHair: UIImageView!
+    @IBOutlet weak var userTop: UIImageView!
+    @IBOutlet weak var userBottom: UIImageView!
+    
     
     var progress = 0.0
     var pointIncr = 0
@@ -29,6 +32,12 @@ class TaskController:UITableViewController {
     var level = 1
     
     var userName = "Jane Doe"
+    
+    var user: [String: String] = [
+        "hair": "maleHair1.png",
+        "top": "maleTop1.png",
+        "bottom": "maleBottom1.png"
+    ]
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,6 +71,17 @@ class TaskController:UITableViewController {
         self.levelProgress.progress = Float(progress)
         self.userLevel.text = String(level)
         self.outletName.text = self.userName
+        
+        //MARK: UserCharacterConfig
+        user["hair"] = UserDefaults.standard.string(forKey: "userHair") ?? "maleHair1.png"
+        user["top"] = UserDefaults.standard.string(forKey: "userTop") ?? "maleTop1.png"
+        user["bottom"] = UserDefaults.standard.string(forKey: "userBottom") ?? "maleBottom1.png"
+        
+        
+        
+        userHair.image = UIImage(named: user["hair"]!)
+        userTop.image = UIImage(named: user["top"]!)
+        userBottom.image = UIImage(named: user["bottom"]!)
         
         // MARK: - Progress View Setting
         levelProgress.transform = levelProgress.transform.scaledBy(x: 1, y: 6)
@@ -165,7 +185,23 @@ extension TaskController: PointsEntryDelegate {
         if section == 0 {
             //Change hair image
             self.userHair.image = UIImage(named: imgName)
+            UserDefaults.standard.set(imgName, forKey: "userHair")
+            print("hair is saved with \(imgName)")
         }
+        else if section == 1 {
+            self.userTop.image = UIImage(named: imgName)
+            UserDefaults.standard.set(imgName, forKey: "userTop")
+            print("top is saved with \(String(describing: UserDefaults.standard.string(forKey: "userTop")))")
+        }
+        else if section == 2 {
+            self.userBottom.image = UIImage(named: imgName)
+            UserDefaults.standard.set(imgName, forKey: "userBottom")
+            print("top is saved with \(String(describing: UserDefaults.standard.string(forKey: "userTop")))")
+        }
+        UserDefaults.standard.synchronize()
+        
+        
+        
     }
     
     func passUserPoints(_ point: Int) {

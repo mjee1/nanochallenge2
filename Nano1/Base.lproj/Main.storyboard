@@ -187,10 +187,12 @@
                         <outlet property="character" destination="Af8-8S-oQU" id="1dd-r0-SyP"/>
                         <outlet property="levelProgress" destination="28w-zw-BHr" id="Ce3-w3-zPP"/>
                         <outlet property="outletName" destination="Ja4-oV-kdX" id="WVw-HW-P4s"/>
+                        <outlet property="userBottom" destination="29M-xG-DHa" id="l8g-H7-Jvf"/>
                         <outlet property="userHair" destination="VVP-fA-QeT" id="nRC-Vt-hcP"/>
                         <outlet property="userLevel" destination="h1H-3I-QQ6" id="V2j-Qe-Mnz"/>
                         <outlet property="userPoints" destination="IGL-Nn-BbE" id="Ybd-Zw-9i3"/>
                         <outlet property="userTask" destination="h3K-fO-1r8" id="90V-IP-Tm9"/>
+                        <outlet property="userTop" destination="0v2-uA-M6d" id="GSN-I0-q2y"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfa-IE-Tst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

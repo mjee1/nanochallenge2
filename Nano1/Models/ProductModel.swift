@@ -10,7 +10,7 @@ import Foundation
 
 struct ProductModel {
     //Hair
-    var itemPic:[String] = [
+    var itemPic: [String] = [
         "maleHair1.png",
         "maleHair2.png",
         "maleHair3.png",
