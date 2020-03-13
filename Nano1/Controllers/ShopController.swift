@@ -134,6 +134,11 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
         
         if (self.currBool[indexPath.row] == "true"){
             print("You've bought this")
+            
+            let alertController = UIAlertController(title: "Item Equipped", message: "You have successfully equipped the item", preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .cancel)
+            
             if indexPath.section == 0 {
                 self.pointEntryDelegate?.passImageName(self.dataModel.itemPic[indexPath.row], indexPath.section)
                 print("Changing hair...")
@@ -144,6 +149,9 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
             else if indexPath.section == 2 {
                 self.pointEntryDelegate?.passImageName(self.dataModel.itemPic3[indexPath.row], indexPath.section)
             }
+            
+            alertController.addAction(OKAction)
+            present(alertController, animated: true)
         }
         
         else {
