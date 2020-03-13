@@ -16,7 +16,13 @@ struct ProductModel {
         "maleHair3.png",
         "maleHair4.png",
         "maleHair5.png",
-        "maleHair6.png"
+        "maleHair6.png",
+        "femaleHair1.png",
+        "femaleHair2.png",
+        "femaleHair3.png",
+        "femaleHair4.png",
+        "femaleHair5.png",
+        "femaleHair6.png"
     ]
     
     var itemBool:[String] = [
@@ -67,7 +73,7 @@ struct ProductModel {
     ]
     
     
-    var itemPrice = ["1", "2", "3", "4", "5", "6"]
+    var itemPrice = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
     var itemPrice2 = ["7", "8", "9", "10", "11", "12"]
     var itemPrice3 = ["1", "2", "3", "4", "5", "6"]
 
