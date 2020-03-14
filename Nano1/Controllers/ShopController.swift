@@ -267,6 +267,7 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     
     //MARK: Personal Function
     
+    
 }
 
 
