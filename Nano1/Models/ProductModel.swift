@@ -25,14 +25,6 @@ struct ProductModel {
         "femaleHair6.png"
     ]
     
-    var itemBool:[String] = [
-        "false",
-        "false",
-        "false",
-        "false",
-        "false",
-        "false"
-    ]
     
     //Top
     var itemPic2:[String] = [
@@ -41,17 +33,14 @@ struct ProductModel {
         "maleTop3.png",
         "maleTop4.png",
         "maleTop5.png",
-        "maleTop6.png"
+        "maleTop6.png",
+        "femaleTop1.png",
+        "femaleTop2.png",
+        "femaleTop3.png",
+        "femaleTop4.png",
+        "femaleTop5.png"
     ]
     
-    var itemBool2:[String] = [
-        "false",
-        "false",
-        "false",
-        "false",
-        "false",
-        "false"
-    ]
     
     //Bottom
     var itemPic3:[String] = [
@@ -63,18 +52,10 @@ struct ProductModel {
         "maleBottom6.png"
     ]
     
-    var itemBool3:[String] = [
-        "false",
-        "false",
-        "false",
-        "false",
-        "false",
-        "false"
-    ]
     
     
     var itemPrice = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
-    var itemPrice2 = ["7", "8", "9", "10", "11", "12"]
+    var itemPrice2 = ["7", "8", "9", "10", "11", "12", "22", "43", "14", "16", "20"]
     var itemPrice3 = ["1", "2", "3", "4", "5", "6"]
 
 }

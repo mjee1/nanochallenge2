@@ -55,12 +55,37 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
         "false"
     ]
     
+    private var currBool2:[String] = [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+    ]
+    
+    //For Bottom
+    private var currBool3:[String] = [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currBool = UserDefaults.standard.stringArray(forKey: "userBool1") ?? []
-        print(currBool)
+        currBool = UserDefaults.standard.stringArray(forKey: "userBool1") ?? currBool
+        currBool2 = UserDefaults.standard.stringArray(forKey: "userBool2") ?? currBool2
+        currBool3 = UserDefaults.standard.stringArray(forKey: "userBool3") ?? currBool3
         
         currPoints = UserDefaults.standard.integer(forKey: "points")
         userPoints.text = String(currPoints)
@@ -71,7 +96,6 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     //MARK: Data Source
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 3
         return sections.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -132,8 +156,20 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     //MARK: Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if (self.currBool[indexPath.row] == "true"){
-            print("You've bought this")
+        var tempArr = self.currBool
+        
+        switch indexPath.section {
+        case 0:
+            tempArr = self.currBool
+        case 1:
+            tempArr = self.currBool2
+        default:
+            tempArr = self.currBool3
+        }
+        print("tempArr is \(tempArr)")
+        
+        if (tempArr[indexPath.item] == "true"){
+            
             
             let alertController = UIAlertController(title: "Item Equipped", message: "You have successfully equipped the item", preferredStyle: .alert)
             
@@ -145,9 +181,11 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
             }
             else if indexPath.section == 1 {
                 self.pointEntryDelegate?.passImageName(self.dataModel.itemPic2[indexPath.row], indexPath.section)
+                print("Changing top...")
             }
             else if indexPath.section == 2 {
                 self.pointEntryDelegate?.passImageName(self.dataModel.itemPic3[indexPath.row], indexPath.section)
+                print("Changing bottom...")
             }
             
             alertController.addAction(OKAction)
@@ -160,10 +198,19 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
             let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
                 //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as! ShopCell
                 //change isBought bool to true
+                var tempPrice = self.currPoints - Int(self.dataModel.itemPrice[indexPath.item])!
                 
+                switch indexPath.section {
+                case 0:
+                    tempPrice = self.currPoints - Int(self.dataModel.itemPrice[indexPath.item])!
+                case 1:
+                    tempPrice = self.currPoints - Int(self.dataModel.itemPrice2[indexPath.item])!
+                default:
+                    tempPrice = self.currPoints - Int(self.dataModel.itemPrice3[indexPath.item])!
+                }
                 
                 //substract the points
-                if (self.currPoints - Int(self.dataModel.itemPrice[indexPath.item])!) >= 0 {
+                if tempPrice >= 0 {
                     if indexPath.section == 0 {
                         self.currPoints -= Int(self.dataModel.itemPrice[indexPath.item]) ?? 0
                         self.currBool[indexPath.item] = "true"
@@ -171,11 +218,14 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
                     }
                     else if indexPath.section == 1 {
                         self.currPoints -= Int(self.dataModel.itemPrice2[indexPath.item]) ?? 0
+                        self.currBool2[indexPath.item] = "true"
+                        UserDefaults.standard.set(self.currBool2, forKey: "userBool2")
                     }
                     else if indexPath.section == 2 {
                         self.currPoints -= Int(self.dataModel.itemPrice3[indexPath.item]) ?? 0
+                        self.currBool3[indexPath.item] = "true"
+                        UserDefaults.standard.set(self.currBool3, forKey: "userBool3")
                     }
-                        
                         
                     self.userPoints.text = String(self.currPoints)
                     
