@@ -12,13 +12,13 @@ class ShopCell: UICollectionViewCell {
     
     @IBOutlet weak var myCell:UILabel!
     @IBOutlet weak var myPic: UIImageView!
-    @IBOutlet weak var lockImage: UIImageView!
     
     var indexAt = 0
     var dataModel = ProductModel()
     
     override func awakeFromNib() {
         self.backgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0)
+        self.layer.cornerRadius = 10
     }
     
     func cellConfig(isHair: Bool, isTop: Bool, isBottom: Bool) {

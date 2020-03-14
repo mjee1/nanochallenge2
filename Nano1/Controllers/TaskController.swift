@@ -62,7 +62,6 @@ class TaskController:UITableViewController {
         taskDoneCounter = UserDefaults.standard.integer(forKey: "taskDone")
         progress = UserDefaults.standard.double(forKey: "levelProgress")
         level = UserDefaults.standard.integer(forKey: "level")
-        print(UserDefaults.standard.integer(forKey: "level"))
         userName = UserDefaults.standard.string(forKey: "userName") ?? "Your Name"
         
         
