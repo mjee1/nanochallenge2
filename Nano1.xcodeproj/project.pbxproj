@@ -32,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		471E058B2411D39A000868A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		475A9AA5240DE64000873847 /* Nano1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		475A9AA5240DE64000873847 /* Tastical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tastical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475A9AA8240DE64000873847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		475A9AAA240DE64000873847 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		475A9AAF240DE64000873847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		475A9AA6240DE64000873847 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				475A9AA5240DE64000873847 /* Nano1.app */,
+				475A9AA5240DE64000873847 /* Tastical.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 			);
 			name = Nano1;
 			productName = Nano1;
-			productReference = 475A9AA5240DE64000873847 /* Nano1.app */;
+			productReference = 475A9AA5240DE64000873847 /* Tastical.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -392,7 +392,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.starkydev.Nano1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tastical;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -410,7 +410,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.starkydev.Nano1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tastical;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

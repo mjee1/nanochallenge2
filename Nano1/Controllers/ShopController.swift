@@ -41,7 +41,7 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     private var myCell = ShopCell()
     
     private var currBool:[String] = [
-        "false",
+        "true",
         "false",
         "false",
         "false",
@@ -56,7 +56,7 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     ]
     
     private var currBool2:[String] = [
-        "false",
+        "true",
         "false",
         "false",
         "false",
@@ -71,7 +71,7 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     
     //For Bottom
     private var currBool3:[String] = [
-        "false",
+        "true",
         "false",
         "false",
         "false",
@@ -148,7 +148,6 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
             }
 
             cell.cellConfig(isHair: isHair, isTop: isTop, isBottom: isBottom)
-//            Item(itemImage: self.itemPic[indexPath.item], itemType: self.itemTypes[0], itemPrice: Int(self.itemPrice[indexPath.item]) ?? 0, isBought: false)
             return cell
         }
     }
@@ -169,24 +168,13 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
         print("tempArr is \(tempArr)")
         
         if (tempArr[indexPath.item] == "true"){
-            
+            //Equipping item that has been bought
             
             let alertController = UIAlertController(title: "Item Equipped", message: "You have successfully equipped the item", preferredStyle: .alert)
             
             let OKAction = UIAlertAction(title: "OK", style: .cancel)
             
-            if indexPath.section == 0 {
-                self.pointEntryDelegate?.passImageName(self.dataModel.itemPic[indexPath.row], indexPath.section)
-                print("Changing hair...")
-            }
-            else if indexPath.section == 1 {
-                self.pointEntryDelegate?.passImageName(self.dataModel.itemPic2[indexPath.row], indexPath.section)
-                print("Changing top...")
-            }
-            else if indexPath.section == 2 {
-                self.pointEntryDelegate?.passImageName(self.dataModel.itemPic3[indexPath.row], indexPath.section)
-                print("Changing bottom...")
-            }
+            self.changeAsset(myIndexPath: indexPath)
             
             alertController.addAction(OKAction)
             present(alertController, animated: true)
@@ -233,17 +221,7 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
                     self.pointEntryDelegate?.passUserPoints(self.currPoints)
                     UserDefaults.standard.set(self.currPoints, forKey: "points")
                     
-                    //Ganti user
-                    if indexPath.section == 0 {
-                        self.pointEntryDelegate?.passImageName(self.dataModel.itemPic[indexPath.row], indexPath.section)
-                        
-                    }
-                    else if indexPath.section == 1 {
-                        self.pointEntryDelegate?.passImageName(self.dataModel.itemPic2[indexPath.row], indexPath.section)
-                    }
-                    else if indexPath.section == 2 {
-                        self.pointEntryDelegate?.passImageName(self.dataModel.itemPic3[indexPath.row], indexPath.section)
-                    }
+                    self.changeAsset(myIndexPath: indexPath)
                 }
                 else {
                     //Show another alert showing that you don't have enough points
@@ -267,6 +245,18 @@ class ShopController:UIViewController, UICollectionViewDelegate, UICollectionVie
     
     //MARK: Personal Function
     
+    func changeAsset(myIndexPath: IndexPath) {
+        if myIndexPath.section == 0 {
+            self.pointEntryDelegate?.passImageName(self.dataModel.itemPic[myIndexPath.row], myIndexPath.section)
+            
+        }
+        else if myIndexPath.section == 1 {
+            self.pointEntryDelegate?.passImageName(self.dataModel.itemPic2[myIndexPath.row], myIndexPath.section)
+        }
+        else if myIndexPath.section == 2 {
+            self.pointEntryDelegate?.passImageName(self.dataModel.itemPic3[myIndexPath.row], myIndexPath.section)
+        }
+    }
     
 }
 
