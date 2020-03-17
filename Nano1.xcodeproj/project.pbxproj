@@ -21,6 +21,7 @@
 		477BF8282418B0E000D2776F /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BF8272418B0E000D2776F /* ItemStore.swift */; };
 		477BF82A2418D25300D2776F /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BF8292418D25300D2776F /* ProductModel.swift */; };
 		478A4EB6240E6C0200A5B540 /* TaskUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A4EB5240E6C0200A5B540 /* TaskUtility.swift */; };
+		479D43A22420A8F300762E81 /* VCR_OSD_MONO_1.001.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 479D43A12420A8F300762E81 /* VCR_OSD_MONO_1.001.ttf */; };
 		47C9681B2419F96400647178 /* ItemUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C9681A2419F96400647178 /* ItemUtility.swift */; };
 		47D4668A240F429A00F77144 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D46689240F429A00F77144 /* ToDoCell.swift */; };
 		47E4CA1624173E02008DF1BE /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E4CA1524173E02008DF1BE /* ShopCell.swift */; };
@@ -47,6 +48,7 @@
 		477BF8272418B0E000D2776F /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		477BF8292418D25300D2776F /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		478A4EB5240E6C0200A5B540 /* TaskUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUtility.swift; sourceTree = "<group>"; };
+		479D43A12420A8F300762E81 /* VCR_OSD_MONO_1.001.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VCR_OSD_MONO_1.001.ttf; sourceTree = "<group>"; };
 		47C9681A2419F96400647178 /* ItemUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemUtility.swift; sourceTree = "<group>"; };
 		47D46689240F429A00F77144 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 		47E4CA1524173E02008DF1BE /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		475A9AA7240DE64000873847 /* Nano1 */ = {
 			isa = PBXGroup;
 			children = (
+				479D43A02420A8A900762E81 /* Fonts */,
 				475A9AAE240DE64000873847 /* Main.storyboard */,
 				47D46688240F427F00F77144 /* Cell */,
 				478A4EB4240E6AB000A5B540 /* Systems */,
@@ -140,6 +143,14 @@
 				475A9AB6240DE64100873847 /* Info.plist */,
 			);
 			path = Systems;
+			sourceTree = "<group>";
+		};
+		479D43A02420A8A900762E81 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				479D43A12420A8F300762E81 /* VCR_OSD_MONO_1.001.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		47D46688240F427F00F77144 /* Cell */ = {
@@ -213,6 +224,7 @@
 				475A9AB5240DE64100873847 /* LaunchScreen.storyboard in Resources */,
 				471E058C2411D39A000868A8 /* Assets.xcassets in Resources */,
 				47E4CA1C24175DCA008DF1BE /* CustomTableCell.xib in Resources */,
+				479D43A22420A8F300762E81 /* VCR_OSD_MONO_1.001.ttf in Resources */,
 				47E4CA1824175202008DF1BE /* char.gif in Resources */,
 				475A9AB0240DE64000873847 /* Main.storyboard in Resources */,
 			);
