@@ -18,11 +18,9 @@
 		47713C5D2410005A007158B3 /* loadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47713C5C2410005A007158B3 /* loadGif.swift */; };
 		4774FE5124163D1200FBF181 /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4774FE5024163D1200FBF181 /* ShopController.swift */; };
 		477BF82224187D0800D2776F /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BF82124187D0800D2776F /* SectionHeader.swift */; };
-		477BF8282418B0E000D2776F /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BF8272418B0E000D2776F /* ItemStore.swift */; };
 		477BF82A2418D25300D2776F /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BF8292418D25300D2776F /* ProductModel.swift */; };
 		478A4EB6240E6C0200A5B540 /* TaskUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A4EB5240E6C0200A5B540 /* TaskUtility.swift */; };
 		479D43A22420A8F300762E81 /* VCR_OSD_MONO_1.001.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 479D43A12420A8F300762E81 /* VCR_OSD_MONO_1.001.ttf */; };
-		47C9681B2419F96400647178 /* ItemUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C9681A2419F96400647178 /* ItemUtility.swift */; };
 		47D4668A240F429A00F77144 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D46689240F429A00F77144 /* ToDoCell.swift */; };
 		47E4CA1624173E02008DF1BE /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E4CA1524173E02008DF1BE /* ShopCell.swift */; };
 		47E4CA1824175202008DF1BE /* char.gif in Resources */ = {isa = PBXBuildFile; fileRef = 47E4CA1724175202008DF1BE /* char.gif */; };
@@ -45,11 +43,9 @@
 		47713C5C2410005A007158B3 /* loadGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadGif.swift; sourceTree = "<group>"; };
 		4774FE5024163D1200FBF181 /* ShopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
 		477BF82124187D0800D2776F /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
-		477BF8272418B0E000D2776F /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		477BF8292418D25300D2776F /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		478A4EB5240E6C0200A5B540 /* TaskUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUtility.swift; sourceTree = "<group>"; };
 		479D43A12420A8F300762E81 /* VCR_OSD_MONO_1.001.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VCR_OSD_MONO_1.001.ttf; sourceTree = "<group>"; };
-		47C9681A2419F96400647178 /* ItemUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemUtility.swift; sourceTree = "<group>"; };
 		47D46689240F429A00F77144 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 		47E4CA1524173E02008DF1BE /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
 		47E4CA1724175202008DF1BE /* char.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = char.gif; sourceTree = "<group>"; };
@@ -125,10 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				475A9AC4240DEB9900873847 /* TaskStore.swift */,
-				477BF8272418B0E000D2776F /* ItemStore.swift */,
 				478A4EB5240E6C0200A5B540 /* TaskUtility.swift */,
 				47713C5C2410005A007158B3 /* loadGif.swift */,
-				47C9681A2419F96400647178 /* ItemUtility.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -250,9 +244,7 @@
 				475A9AC1240DE99E00873847 /* TaskController.swift in Sources */,
 				475A9AAB240DE64000873847 /* SceneDelegate.swift in Sources */,
 				47E4CA1624173E02008DF1BE /* ShopCell.swift in Sources */,
-				477BF8282418B0E000D2776F /* ItemStore.swift in Sources */,
 				477BF82224187D0800D2776F /* SectionHeader.swift in Sources */,
-				47C9681B2419F96400647178 /* ItemUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
